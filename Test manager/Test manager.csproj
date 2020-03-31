@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="..\packages\Xamarin.Forms.4.6.0.494-pre2\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.4.6.0.494-pre2\build\Xamarin.Forms.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+        <ProjectGuid>{212D80B5-79AF-4696-B74B-23A53DADD72D}</ProjectGuid>
+        <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>Test manager</RootNamespace>
+        <AssemblyName>Test manager</AssemblyName>
+        <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+        <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
+        <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <EnableCodeSigning>false</EnableCodeSigning>
+        <CodeSigningKey>Mac Developer</CodeSigningKey>
+        <CreatePackage>false</CreatePackage>
+        <EnablePackageSigning>false</EnablePackageSigning>
+        <IncludeMonoRuntime>false</IncludeMonoRuntime>
+        <UseSGen>true</UseSGen>
+        <UseRefCounting>true</UseRefCounting>
+        <PlatformTarget>x86</PlatformTarget>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <EnableCodeSigning>false</EnableCodeSigning>
+        <CreatePackage>true</CreatePackage>
+        <EnablePackageSigning>false</EnablePackageSigning>
+        <IncludeMonoRuntime>true</IncludeMonoRuntime>
+        <UseSGen>true</UseSGen>
+        <UseRefCounting>true</UseRefCounting>
+        <LinkMode>SdkOnly</LinkMode>
+        <PlatformTarget>x86</PlatformTarget>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Microcharts, Version=0.8.4.2, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Microcharts.0.8.5-pre\lib\xamarinmac\Microcharts.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microcharts.Forms, Version=0.8.5.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Microcharts.Forms.0.8.5-pre\lib\netstandard1.3\Microcharts.Forms.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microcharts.macOS, Version=1.0.6989.33272, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Microcharts.0.8.5-pre\lib\xamarinmac\Microcharts.macOS.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+          <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="SkiaSharp, Version=1.68.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+          <HintPath>..\packages\SkiaSharp.1.68.0\lib\Xamarin.Mac20\SkiaSharp.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="SkiaSharp.Views.Forms, Version=1.68.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\SkiaSharp.Views.Forms.1.68.0\lib\Xamarin.Mac20\SkiaSharp.Views.Forms.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="SkiaSharp.Views.Mac, Version=1.68.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+          <HintPath>..\packages\SkiaSharp.Views.1.68.0\lib\Xamarin.Mac20\SkiaSharp.Views.Mac.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.IO.Compression" />
+        <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Net.Http" />
+        <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+          <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0-preview.1.20120.5\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+          <HintPath>..\packages\System.Text.Encodings.Web.5.0.0-preview.1.20120.5\lib\netstandard2.1\System.Text.Encodings.Web.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Xamarin.Forms.4.6.0.494-pre2\lib\Xamarin.Mac\Xamarin.Forms.Core.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Xamarin.Forms.Platform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Xamarin.Forms.4.6.0.494-pre2\lib\Xamarin.Mac\Xamarin.Forms.Platform.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\packages\Xamarin.Forms.4.6.0.494-pre2\lib\Xamarin.Mac\Xamarin.Forms.Xaml.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="Xamarin.Mac" />
+    </ItemGroup>
+    <ItemGroup>
+        <ImageAsset Include="Assets.xcassets\Contents.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources\" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Info.plist" />
+        <None Include="Entitlements.plist" />
+        <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Main.cs" />
+        <Compile Include="AppDelegate.cs" />
+        <Compile Include="Source\Controllers\MainController.cs" />
+        <Compile Include="Source\Controllers\MainController.designer.cs">
+          <DependentUpon>MainController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Controllers\StatisticsController.cs" />
+        <Compile Include="Source\Controllers\StatisticsController.designer.cs">
+          <DependentUpon>StatisticsController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Source\Enums\ParseResultsEnum.cs" />
+        <Compile Include="Source\Enums\TestResultsEnum.cs" />
+        <Compile Include="Source\Models\TestRunStoreDataModel.cs" />
+        <Compile Include="Source\Services\ApplicationData\ApplicationData.cs" />
+        <Compile Include="Source\Services\ApplicationData\DataList.cs" />
+        <Compile Include="Source\Services\ApplicationData\DataNode.cs" />
+        <Compile Include="Source\Services\OutputParser\ParseResults\CrashDataResult.cs" />
+        <Compile Include="Source\Services\OutputParser\ParseResults\RotationAngelResult.cs" />
+        <Compile Include="Source\Services\OutputParser\ParseResults\FrameLogResult.cs" />
+        <Compile Include="Source\Services\OutputParser\ParseResults\FrameRenderTimeResult.cs" />
+        <Compile Include="Source\Services\TestRunsDataStorage.cs" />
+        <Compile Include="Source\Services\OutputParser\OutputParser.cs" />
+        <Compile Include="Source\Services\OutputParser\ParseResults\EmptyResult.cs" />
+        <Compile Include="Source\Services\OutputParser\ParseResults\IParseResult.cs" />
+        <Compile Include="Source\Services\OutputParser\ParseResults\TurnsInfoResult.cs" />
+        <Compile Include="Source\Services\TestRun.cs" />
+        <Compile Include="Source\Services\Utils.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <InterfaceDefinition Include="Main.storyboard" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Resources\runs_data.json" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+      <PropertyGroup>
+        <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+      </PropertyGroup>
+      <Error Condition="!Exists('..\packages\Xamarin.Forms.4.6.0.494-pre2\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.4.6.0.494-pre2\build\Xamarin.Forms.props'))" />
+      <Error Condition="!Exists('..\packages\Xamarin.Forms.4.6.0.494-pre2\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.4.6.0.494-pre2\build\Xamarin.Forms.targets'))" />
+    </Target>
+    <Import Project="..\packages\Xamarin.Forms.4.6.0.494-pre2\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.4.6.0.494-pre2\build\Xamarin.Forms.targets')" />
+</Project>

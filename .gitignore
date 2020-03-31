@@ -1,0 +1,6 @@
+.idea
+packages
+.DS_Store
+*.user
+Test manager/bin
+Test manager/obj
